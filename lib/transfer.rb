@@ -16,7 +16,7 @@ class Transfer
 
     if @status == "complete"
         self.valid? == false
-    elsif @sender.valid?
+    elsif BankAccount.@sender.valid?
         @status == "pending"
         @sender.balance -= 50
         @receiver.balance += 50
