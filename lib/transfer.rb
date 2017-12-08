@@ -14,12 +14,12 @@ class Transfer
 
   def execute_transaction
     if @status = "complete"
-      valid? = false
-    elsif @status = "pending"
-    @sender.balance -= 50
-    @receiver.balance += 50
-    @status = "complete"
-  end
+        def valid? = false
+      elsif @status = "pending"
+      @sender.balance -= 50
+      @receiver.balance += 50
+      @status = "complete"
+    end
   end
 
 end
