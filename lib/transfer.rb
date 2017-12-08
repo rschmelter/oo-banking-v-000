@@ -13,7 +13,8 @@ class Transfer
   end
 
   def execute_transaction
-
+    @sender.balance -= 50
+    @receiver.balance += 50
   end
 
 end
