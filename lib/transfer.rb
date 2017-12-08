@@ -15,7 +15,7 @@ class Transfer
   def execute_transaction
 
     if @status == "complete"
-        self.valid? == false
+        self.valid? = false
     elsif @sender.valid?
         @status == "pending"
         @sender.balance -= 50
