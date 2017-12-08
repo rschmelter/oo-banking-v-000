@@ -18,6 +18,7 @@ class Transfer
     # binding.pry
     if !valid? && @sender.balance < @amount
       "Transaction rejected. Please check your account balance."
+      @status = "rejected"
     elsif @status == "pending"
         @sender.balance -= 50
         @receiver.balance += 50
